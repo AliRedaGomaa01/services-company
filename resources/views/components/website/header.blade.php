@@ -98,7 +98,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img src="frontend-assets/img/logo.png" class="logo" alt="Logo">
+                    <img src="/frontend-assets/img/logo.png" class="logo" alt="Logo">
                 </a>
             </div>
             <!-- End Header Navigation -->

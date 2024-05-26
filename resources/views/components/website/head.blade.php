@@ -19,17 +19,17 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="frontend-assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/frontend-assets/img/favicon.png" type="image/x-icon">
 
     <!-- ========== Start Stylesheet ========== -->
-    <link href="frontend-assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="frontend-assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="frontend-assets/css/flaticon-set.css" rel="stylesheet" />
-    <link href="frontend-assets/css/magnific-popup.css" rel="stylesheet" />
-    <link href="frontend-assets/css/owl.carousel.min.css" rel="stylesheet" />
-    <link href="frontend-assets/css/owl.theme.default.min.css" rel="stylesheet" />
-    <link href="frontend-assets/css/animate.css" rel="stylesheet" />
-    <link href="frontend-assets/css/bootsnav.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet">
-    <link href="frontend-assets/css/responsive.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/animate.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="/frontend-assets/css/style.css" rel="stylesheet">
+    <link href="/frontend-assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
