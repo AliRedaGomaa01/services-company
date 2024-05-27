@@ -1,11 +1,11 @@
 @extends('layouts.website')
 
 @push('meta')
-<meta name="description" content="About Us Page">
+<meta name="description" content="Contact Us Page">
 @endpush
 
 @section('title')
-About Us
+Contact Us
 @endsection
 
 @section('content')
