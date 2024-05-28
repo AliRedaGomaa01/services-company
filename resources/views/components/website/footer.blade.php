@@ -46,10 +46,10 @@
                     <div class="bottom" style="margin-top: 2rem ">
                         <h4>Send A Message</h4>
                         <ul>
-                            <li>
-                                <a href="#" style="border:0px">Whatsapp</a>
+                            <li style="margin:0px !important">
+                                <a href="#" style="border:0px; ">Whatsapp</a>
                             </li>
-                            <li>
+                            <li style="margin:0px !important">
                                 <a href="#" style="border:0px">Email</a>
                             </li>
                         </ul>
