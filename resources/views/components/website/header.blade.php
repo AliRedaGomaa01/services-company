@@ -79,13 +79,17 @@
                 <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
 
                     @foreach (__('website.navItems') as $routeName => $title)
-                        @If($title != 'Services')
+                        @if ($title != 'Services')
                             <li class="dropdown text-center">
-                                <a href="{{ route($routeName) }}" class="{{ request()->routeIs($routeName) ? 'active' : '' }}" style="font-size: 1.7rem"> {{ $title }} </a>
+                                <a href="{{ route($routeName) }}"
+                                    class="{{ request()->routeIs($routeName) ? 'active' : '' }}"
+                                    style="font-size: 1.7rem"> {{ $title }} </a>
                             </li>
                         @else
                             <li class="dropdown text-center">
-                                <a href="{{ route($routeName) }}" class="dropdown-toggle {{ request()->routeIs($routeName) ? 'active' : '' }}" data-toggle="dropdown" style="font-size: 1.7rem">{{ $title }}</a>
+                                <a href="#"
+                                    class="dropdown-toggle {{ request()->routeIs($routeName) ? 'active' : '' }}"
+                                    data-toggle="dropdown" style="font-size: 1.7rem">{{ $title }}</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">All Services</a></li>
                                     <li><a href="#">Service One</a></li>
@@ -97,6 +101,10 @@
                         @endif
                     @endforeach
 
+                    <li class="dropdown text-center">
+                        <a href="{{ url()->current() . '?lang=' . (app()->currentLocale() == 'en' ? 'ar' : 'en') }}"
+                            style="font-size: 1.7rem"> {{ app()->currentLocale() == 'en' ? 'العربية' : "English" }} </a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>

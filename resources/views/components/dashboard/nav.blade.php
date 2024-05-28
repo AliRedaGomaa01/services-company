@@ -34,7 +34,7 @@
                     <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link"
                             id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <i class="flag-icon flag-icon-{{ $lang == 'ar' ? 'sa' : 'us'}}"></i>
+                            <i class="flag-icon flag-icon-{{ app()->currentLocale() == 'ar' ? 'sa' : 'us'}}"></i>
                             <span
                                 class="selected-language"></span></a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-flag">
@@ -55,7 +55,7 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             {{-- <a class="dropdown-item"
                                 href="user-profile.html"><i class="feather icon-user"></i> Edit Profile</a> --}}
-                            <div class="dropdown-divider"></div><a class="dropdown-item"
+                            <a class="dropdown-item"
                                 href="login-with-bg-image.html"><i class="feather icon-power"></i> Logout</a>
                         </div>
                     </li>
