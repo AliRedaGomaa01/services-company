@@ -55,7 +55,7 @@
 
         .active {
             font-weight: 900;
-            color : #ff5e14 !important;
+            opacity : 0.755 !important;
             text-decoration: underline;
         }
     </style>

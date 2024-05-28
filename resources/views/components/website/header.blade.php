@@ -79,9 +79,22 @@
                 <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
 
                     @foreach (__('website.navItems') as $routeName => $title)
-                        <li class="dropdown text-center">
-                            <a href="{{ route($routeName) }}" class="{{ request()->routeIs($routeName) ? 'active' : '' }}" style="font-size: 1.7rem"> {{ $title }} </a>
-                        </li>
+                        @If($title != 'Services')
+                            <li class="dropdown text-center">
+                                <a href="{{ route($routeName) }}" class="{{ request()->routeIs($routeName) ? 'active' : '' }}" style="font-size: 1.7rem"> {{ $title }} </a>
+                            </li>
+                        @else
+                            <li class="dropdown text-center">
+                                <a href="{{ route($routeName) }}" class="dropdown-toggle {{ request()->routeIs($routeName) ? 'active' : '' }}" data-toggle="dropdown" style="font-size: 1.7rem">{{ $title }}</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">All Services</a></li>
+                                    <li><a href="#">Service One</a></li>
+                                    <li><a href="#">Service Two</a></li>
+                                    <li><a href="#">Service Three</a></li>
+                                    <li><a href="#">Service Four</a></li>
+                                </ul>
+                            </li>
+                        @endif
                     @endforeach
 
                 </ul>
