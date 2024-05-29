@@ -14,7 +14,11 @@ Route::view('/test', 'test')->name('test');
 Route::view('/gallery', 'pages.gallery')->name('gallery');
 Route::view('/blog', 'pages.blog')->name('blog');
 Route::view('/services', 'pages.services')->name('services');
+Route::view('/one-service', 'pages.services-single')->name('services.single');
+Route::view('/one-blog', 'pages.blog-single')->name('blog.single');
 Route::view('/faq', 'pages.faq')->name('faq');
+Route::view('/joint-ventures', 'pages.joint-ventures')->name('joint-ventures'); 
+Route::view('/one-joint-venture', 'pages.joint-venture-single')->name('joint-venture-single'); 
 Route::view('/about-us', 'pages.about-us')->name('about-us'); 
 Route::view('/contact-us', 'pages.contact-us')->name('contact-us'); 
 
