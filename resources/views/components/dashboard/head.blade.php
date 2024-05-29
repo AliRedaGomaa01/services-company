@@ -33,4 +33,27 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <!-- END: Custom CSS-->
 
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        * {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .active {
+            font-weight: 900;
+            opacity : 0.755 !important;
+            text-decoration: underline;
+        }
+    </style>
+
+    @stack('styles')
+
 </head>
