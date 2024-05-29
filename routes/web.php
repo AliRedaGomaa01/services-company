@@ -9,8 +9,11 @@ use App\Http\Controllers\SettingController;
 //     return view('welcome');
 // });
 
-Route::view('/', 'pages.home')->name('home');
 Route::view('/test', 'test')->name('test');
+Route::get( 'test2', function () {
+});
+
+Route::view('/', 'pages.home')->name('home');
 Route::view('/gallery', 'pages.gallery')->name('gallery');
 Route::view('/blog', 'pages.blog')->name('blog');
 Route::view('/services', 'pages.services')->name('services');
@@ -38,3 +41,5 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function(){
 
 
 });
+
+
