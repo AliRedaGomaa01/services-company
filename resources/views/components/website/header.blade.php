@@ -91,7 +91,7 @@
                                     class="dropdown-toggle {{ request()->routeIs($routeName) ? 'active' : '' }}"
                                     data-toggle="dropdown" style="font-size: 1.7rem">{{ $title }}</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">All Services</a></li>
+                                    <li><a href="{{ route('services') }}">All Services</a></li>
                                     <li><a href="#">Service One</a></li>
                                     <li><a href="#">Service Two</a></li>
                                     <li><a href="#">Service Three</a></li>

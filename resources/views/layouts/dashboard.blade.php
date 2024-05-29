@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
+  
 <!-- BEGIN: Head-->
 @include('components.dashboard.head')
-
 <!-- END: Head-->
 
 <!-- BEGIN: Body-->
@@ -14,7 +14,7 @@
     <!-- END: Header-->
 
     <!-- BEGIN: Main Menu-->
-    @include('components.dashboard.sidbar')
+    @include('components.dashboard.sidebar')
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->

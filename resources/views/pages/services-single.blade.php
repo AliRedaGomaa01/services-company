@@ -1,11 +1,11 @@
 @extends('layouts.website')
 
 @push('meta')
-<meta name="description" content="Single Post Page">
+<meta name="description" content="Single Service Page">
 @endpush
 
 @section('title')
-Post
+Single Service
 @endsection
 
 @section('content')
@@ -29,14 +29,14 @@ Post
 
     <!-- Start Blog
     ============================================= -->
-    <div class="blog-area single full-blog full-blog default-padding">
+    <div class="blog-area single full-blog left-sidebar full-blog default-padding">
         <div class="container">
             <div class="row">
                 <div class="blog-items">
-                    <div class="blog-content col-md-10 col-md-offset-1">
+                    <div class="blog-content col-md-8">
                         <div class="single-item">
 
-                            <!-- Start Post Thumb -->
+                            <!-- Start Post -->
                             <div class="thumb">
                                 <img src="frontend-assets/img/blog/11.jpg" alt="Thumb">
                                 <div class="author">
@@ -70,12 +70,40 @@ Post
                                     Surrounded to me occasional pianoforte alteration unaffected impossible ye. For saw half than cold. Pretty merits waited six talked pulled you. Conduct replied off led whether any shortly why arrived adapted. Numerous ladyship so raillery humoured goodness received an. So narrow formal length my highly longer afford oh. Tall neat he make or at dull ye. 
                                 </p>
 
+                                <!-- End Post -->
                             </div>
                         </div>
                     </div>
+                    <!-- Start Sidebar -->
+                    <div class="sidebar col-md-4">
+                        <aside>
+                            <div class="sidebar-item category">
+                                <div class="title">
+                                    <h4> Subservices </h4>
+                                </div>
+                                <div class="sidebar-info">
+                                    <ul>
+                                        <li>
+                                            <a href="#">national </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">sports </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">megazine </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">health </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- End Start Sidebar -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Blog -->
+    <!-- End Blog -->    
 @endsection

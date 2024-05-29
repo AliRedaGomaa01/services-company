@@ -151,7 +151,7 @@
                     <div class="col-md-6 thumb bg-cover" style="background-image: url(frontend-assets/img/banner/1.jpg);">
                     </div>
                     <div class="col-md-6 info">
-                        <h4>Why Choose Us</h4>
+                        <h4>Why Choose Us</h4> 
                         <h2>The Best Solution for all Industrial & Factory Businesses</h2>
                         <p>
                             Dependent certainty off discovery him his tolerably offending. Ham for attention remainder

@@ -86,42 +86,11 @@ Contact Us
                             <div id="message" class="alert-msg"></div>
                         </div>
                     </form>
-                    <ul>
-                        <li>
-                            <div class="icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="info">
-                                <span>Hotline</span> +99-34-8878-9989
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <i class="fas fa-envelope-open"></i>
-                            </div>
-                            <div class="info">
-                                <span>Emergency Email</span> info@yourdomain.com
-                            </div>
-                        </li>
-                    </ul>
                 </div>
                 <!-- End Start Contact Form -->
             </div>
         </div>
     </div>
     <!-- End Contact Area -->
-
-    <!-- Start Google Maps 
-    ============================================= -->
-    <div class="maps-area">
-        <div class="container-full">
-            <div class="row">
-                <div class="google-maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14767.262289338461!2d70.79414485000001!3d22.284975!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1424308883981"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Google Maps -->
     
 @endsection
