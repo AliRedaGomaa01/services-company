@@ -11,6 +11,7 @@ use App\Http\Controllers\SettingController;
 
 Route::view('/test', 'test')->name('test');
 Route::get( 'test2', function () {
+// 
 });
 
 Route::view('/', 'pages.home')->name('home');
@@ -32,12 +33,16 @@ Auth::routes();
 Route::prefix('/dashboard')->name('dashboard.')->group(function(){
 
   Route::controller( HomeController::class)->group(function(){
+
     Route::get('/', 'index')->name('index');
+
+    Route::get('/settings', [SettingController::class, 'edit'])->name('settings.edit');
+    Route::patch('/settings', [SettingController::class, 'update'])->name('settings.update');
+
+
   });
 
-  Route::resource('/settings', SettingController::class);
   
-  Route::resource('/images', SettingController::class);
 
 
 });

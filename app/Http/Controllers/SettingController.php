@@ -8,58 +8,34 @@ use Illuminate\Http\Request;
 class SettingController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
+     * Retrieves all the settings from the database and returns a view for editing the settings.
+    *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * */
+    public function edit()
     {
-        //
+        $settings = Setting::all()->keyBy('name');
+        return view('dashboard.settings', compact('settings'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Updates the settings in the database and returns a view for editing the settings.
+     *
      */
-    public function create()
+    public function update(Request $request)
     {
-        //
-    }
+        $rules = [];
+        
+        foreach ($request->all() as $key => $value) {
+            $rules[$key] = 'required|string|max:1024';
+        }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        $request->validate($rules);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Setting $setting)
-    {
-        //
-    }
+        foreach ($request->all() as $key => $value) {
+            Setting::where('name', $key)->update(['value' => $value]);
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Setting $setting)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Setting $setting)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Setting $setting)
-    {
-        //
+        return redirect()->route('dashboard.settings.edit')->with('success' , __('Updated Successfully'));
     }
 }

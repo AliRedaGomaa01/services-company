@@ -34,93 +34,99 @@ class DatabaseSeeder extends Seeder
 
         $this->call (SettingSeeder::class );
         
-        $sliders = [
-            
-        ];
-        
-        foreach ( $sliders as $slider ) {
-            Slider::create( $slider );
-        };
+        // $sliderImages = [
+        //     ['path' => '/frontend-assets/img/banner/1.jpg'],
+        //     ['path' => '/frontend-assets/img/banner/2.jpg'],
+        //     ['path' => '/frontend-assets/img/banner/3.jpg'],
+        // ];
 
-        $reviews = [
+        // $sliders = [
             
-        ];
+        // ];
         
-        foreach ( $reviews as $review ) {
-            Review::create( $review );
-        };
+        // foreach ( $sliders as $slider ) {
+        //     Slider::create( $slider );
+        // };
 
-        $clients = [
+        // $reviews = [
             
-        ];
+        // ];
         
-        foreach ( $clients as $client ) {
-            Client::create( $client );
-        };
+        // foreach ( $reviews as $review ) {
+        //     Review::create( $review );
+        // };
 
-        $services = [
+        // $clients = [
             
-        ];
+        // ];
         
-        foreach ( $services as $service ) {
-            Service::create( $service );
-        };
+        // foreach ( $clients as $client ) {
+        //     Client::create( $client );
+        // };
 
-        $categories = [
+        // $services = [
             
-        ];
+        // ];
         
-        foreach ( $categories as $category ) {
-            Category::create( $category );
-        };
+        // foreach ( $services as $service ) {
+        //     Service::create( $service );
+        // };
 
-        $galleries = [
+        // $categories = [
             
-        ];
+        // ];
         
-        foreach ( $galleries as $gallery ) {
-            Gallery::create( $gallery );
-        };
+        // foreach ( $categories as $category ) {
+        //     Category::create( $category );
+        // };
 
-        $posts = [
+        // $galleries = [
             
-        ];
+        // ];
         
-        foreach ( $posts as $post ) {
-            Post::create( $post );
-        };
+        // foreach ( $galleries as $gallery ) {
+        //     Gallery::create( $gallery );
+        // };
 
-        $faqs = [
+        // $posts = [
             
-        ];
+        // ];
         
-        foreach ( $faqs as $faq ) {
-            FAQ::create( $faq );
-        };
+        // foreach ( $posts as $post ) {
+        //     Post::create( $post );
+        // };
 
-        $subservices = [
+        // $faqs = [
             
-        ];
+        // ];
         
-        foreach ( $subservices as $subservice ) {
-            Subservice::create( $subservice );
-        };
+        // foreach ( $faqs as $faq ) {
+        //     FAQ::create( $faq );
+        // };
 
-        $jointVentures = [
+        // $subservices = [
             
-        ];
+        // ];
         
-        foreach ( $jointVentures as $jointVenture ) {
-            JointVenture::create( $jointVenture );
-        };
+        // foreach ( $subservices as $subservice ) {
+        //     Subservice::create( $subservice );
+        // };
 
-        $teamMembers = [
+        // $jointVentures = [
             
-        ];
+        // ];
         
-        foreach ( $teamMembers as $teamMember ) {
-            TeamMember::create( $teamMember );
-        };
+        // foreach ( $jointVentures as $jointVenture ) {
+        //     JointVenture::create( $jointVenture );
+        // };
+
+        // $teamMembers = [
+            
+        // ];
+        
+        // foreach ( $teamMembers as $teamMember ) {
+        //     TeamMember::create( $teamMember );
+        // };
 
     }
 }

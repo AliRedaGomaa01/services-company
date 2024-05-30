@@ -5,9 +5,9 @@
                 <li class="nav-item mobile-menu d-lg-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs"
                         href="#"><i class="feather icon-menu font-large-1"></i></a></li>
                 <li class="nav-item mr-auto"><a class="navbar-brand"
-                        href="/html/ltr/vertical-collapsed-menu-template/index.html"><img class="brand-logo"
+                        href="{{ route('dashboard.index') }}"><img class="brand-logo"
                             alt="stack admin logo" src="/app-assets/images/logo/stack-logo-light.png">
-                        <h2 class="brand-text">Stack</h2>
+                        <h2 class="brand-text">Dashboard</h2>
                     </a></li>
                 <li class="nav-item d-none d-lg-block nav-toggle"><a class="nav-link modern-nav-toggle pr-0"
                         data-toggle="collapse"><i class="toggle-icon feather icon-toggle-right font-medium-3 white"
