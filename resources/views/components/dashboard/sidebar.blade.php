@@ -17,7 +17,7 @@
     $routes = [
         'settings' =>  route('dashboard.settings.edit') ,
         'sliders' => route('dashboard.sliders.index') ,
-        'services' => '#' ,
+        'services' => route('dashboard.services.index') ,
         'subservices' => '#' ,
         'joint-ventures' => '#' ,
         'team-members' => '#' ,

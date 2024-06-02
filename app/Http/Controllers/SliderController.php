@@ -30,7 +30,7 @@ class SliderController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(SliderRequest $request)
+    public function store(Request $request)
     {
         $rules = (new SliderRequest())->rules();
         $rules['image'] = ['required' , 'image' , 'max:10240'];
@@ -70,7 +70,7 @@ class SliderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(SliderRequest $request, Slider $slider)
+    public function update(Request $request, Slider $slider)
     {
         $rules = (new SliderRequest())->rules();
         $rules['image'] = ['nullable' , 'image' , 'max:10240'];

@@ -36,6 +36,8 @@ class DatabaseSeeder extends Seeder
         $this->call (SettingSeeder::class );
 
         $this->call (SliderSeeder::class );
+
+        $this->call (ServiceSeeder::class );
         
         // $reviews = [
             
@@ -51,14 +53,6 @@ class DatabaseSeeder extends Seeder
         
         // foreach ( $clients as $client ) {
         //     Client::create( $client );
-        // };
-
-        // $services = [
-            
-        // ];
-        
-        // foreach ( $services as $service ) {
-        //     Service::create( $service );
         // };
 
         // $categories = [

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 
 // Route::get('/', function () {
@@ -42,6 +43,7 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function(){
     Route::patch('/settings', [SettingController::class, 'update'])->name('settings.update');
 
     Route::resource('/sliders', SliderController::class);
+    Route::resource('/services', ServiceController::class);
 
 
   });

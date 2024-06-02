@@ -1,5 +1,11 @@
 @extends('layouts.dashboard')
 
+@section('description')
+    <meta name="description" content="website services page in the dashboard">
+@endsection
+
+@section('title', 'Services')
+
 @section('content')
     <!-- Zero configuration table -->
     <section id="configuration">
@@ -20,28 +26,45 @@
                     </div>
                     <div class="card-content collapse show">
                         <div class="card-body card-dashboard">
-                            <button class="card-text btn btn-primary my-3">Add New</button>
+                            <a href="{{ route('dashboard.services.create') }}" target="_blank">
+                                <button class="card-text btn btn-primary my-3">Add New</button>
+                            </a>
                             <table class="table table-striped table-bordered zero-configuration">
-                                <thead>
+                                <thead class="text-center">
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
+                                        <th>#</th>
+                                        <th>Arabic Title</th>
+                                        <th>English Title</th>
+                                        <th>Arabic Description</th>
+                                        <th>English Description</th>
+                                        <th>Image</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                    </tr>
-                                </tfoot>
+                                <tbody class="text-center">
+                                    @foreach ($services as $key => $service)
+                                        <tr>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $service->title_ar }}</td>
+                                            <td>{{ $service->title_en }}</td>
+                                            <td>{{ $service->description_ar }}</td>
+                                            <td>{{ $service->description_en }}</td>
+                                            <td> <a href="{{ $service->image->publicPath }}" target="_blank"><img
+                                                        src="{{ $service->image->publicPath }}" width="60px"
+                                                        alt="service image"></a></td>
+                                            <td class="d-flex flex-row justify-content-center align-items-center" style="gap: 5px">
+                                                <a href="{{ route('dashboard.services.edit', $service->id) }}"
+                                                    class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                                                <form id="delete-form-{{ $service->id }}" data-id="{{ $service->id }}" action=" {{ route('dashboard.services.destroy', $service->id) }} "
+                                                    method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <div onclick="deleteForm({{ $service->id }})" class="btn btn-danger"><i class="fa fa-trash"></i></div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tfoot>
                             </table>
                         </div>
                     </div>
@@ -51,3 +74,11 @@
     </section>
     <!--/ Zero configuration table -->
 @endsection
+
+@push('scripts')
+<script>
+    function deleteForm(id) {
+        if(confirm('Are you sure?')) document.getElementById(`delete-form-${id}`).submit();
+    }
+</script>
+@endpush
