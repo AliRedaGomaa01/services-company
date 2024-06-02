@@ -11,11 +11,4 @@ class Setting extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
-    # relations 
-
-    public function image()
-    {
-        return $this->belongsTo(Image::class);
-    }
-
 }

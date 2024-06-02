@@ -17,6 +17,11 @@ class Post extends Model
         'description' ,
     ];
 
+    protected $with = [
+        'image' ,
+        'category'
+    ];
+
     // Accessors
 
     public function getDescriptionAttribute()

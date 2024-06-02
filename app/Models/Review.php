@@ -16,6 +16,10 @@ class Review extends Model
         'author' ,
     ];
 
+    protected $with = [
+        'image' ,
+    ];
+
     public function getTextAttribute()
     {
         return app()->isLocale('ar') ? $this->text_ar : $this->text_en ;

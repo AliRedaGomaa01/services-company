@@ -16,6 +16,10 @@ class JointVenture extends Model
         'description' ,
     ];
 
+    protected $with = [
+        'image' ,
+    ];
+
     // Accessors
 
     public function getDescriptionAttribute()

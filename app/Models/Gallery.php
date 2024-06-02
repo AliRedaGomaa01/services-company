@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Gallery extends Model
@@ -13,6 +14,11 @@ class Gallery extends Model
 
     protected $appends = [
         'title' ,
+    ];
+
+    protected $with = [
+        'image' ,
+        'category'
     ];
 
     // Accessors
@@ -27,5 +33,10 @@ class Gallery extends Model
     public function image()
     {
         return $this->belongsTo(Image::class);
+    }
+
+    public function category(): MorphOne
+    {
+        return $this->morphOne(Category::class, 'categorizable');
     }
 }

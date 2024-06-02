@@ -16,6 +16,11 @@ class Subservice extends Model
         'description' ,
     ];
 
+    protected $with = [
+        'image' ,
+        'service' ,
+    ];
+
     public function getTitleAttribute()
     {
         return app()->isLocale('ar') ? $this->title_ar : $this->title_en ;

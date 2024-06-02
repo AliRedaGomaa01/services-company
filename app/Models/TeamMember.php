@@ -17,6 +17,10 @@ class TeamMember extends Model
         'text' ,
     ];
 
+    protected $with = [
+        'image' ,
+    ];
+
     // Accessors
 
     public function getTextAttribute()
