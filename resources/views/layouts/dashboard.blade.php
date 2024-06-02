@@ -34,7 +34,15 @@
           <div class="content-header row">
           </div>
           <div class="content-body">
-              
+
+            @if( $errors->all() )
+              <div class="alert alert-danger" role="alert">
+                @foreach ( $errors->all() as $error)
+                    <p class="text-white"> {{ $error }} </p>
+                @endforeach
+              </div>
+            @endif
+            
             @yield('content') 
             
           </div>

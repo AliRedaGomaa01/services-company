@@ -13,9 +13,10 @@
         'categories' => 'icon-bookmark' ,
         'faq' => 'icon-help-circle' ,
     ];
+    
     $routes = [
         'settings' =>  route('dashboard.settings.edit') ,
-        'sliders' => '#' ,
+        'sliders' => route('dashboard.sliders.index') ,
         'services' => '#' ,
         'subservices' => '#' ,
         'joint-ventures' => '#' ,

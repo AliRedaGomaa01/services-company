@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\SettingController;
 
 // Route::get('/', function () {
@@ -10,6 +11,7 @@ use App\Http\Controllers\SettingController;
 // });
 
 Route::view('/test', 'test')->name('test');
+
 Route::get( 'test2', function () {
 // 
 });
@@ -38,6 +40,8 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function(){
 
     Route::get('/settings', [SettingController::class, 'edit'])->name('settings.edit');
     Route::patch('/settings', [SettingController::class, 'update'])->name('settings.update');
+
+    Route::resource('/sliders', SliderController::class);
 
 
   });

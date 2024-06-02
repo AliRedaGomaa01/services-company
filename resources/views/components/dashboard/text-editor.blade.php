@@ -18,7 +18,7 @@
                       <div class="editor" id='{{ $id }}'>
                         {!! $value ?? '' !!}
                       </div>
-                      <textarea name=" {{ $textareaName }}" id="{{ $id . '1' }}" class="d-none">
+                      <textarea name="{{ $textareaName }}" id="{{ $id . '1' }}" class="d-none">
                         {!! $value ?? '' !!}
                       </textarea>
                     </div>

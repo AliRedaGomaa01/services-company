@@ -6,6 +6,7 @@ use App\Models\FAQ;
 use App\Models\Post;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Client;
 use App\Models\Review;
 use App\Models\Slider;
@@ -33,21 +34,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call (SettingSeeder::class );
-        
-        // $sliderImages = [
-        //     ['path' => '/frontend-assets/img/banner/1.jpg'],
-        //     ['path' => '/frontend-assets/img/banner/2.jpg'],
-        //     ['path' => '/frontend-assets/img/banner/3.jpg'],
-        // ];
 
-        // $sliders = [
-            
-        // ];
+        $this->call (SliderSeeder::class );
         
-        // foreach ( $sliders as $slider ) {
-        //     Slider::create( $slider );
-        // };
-
         // $reviews = [
             
         // ];
