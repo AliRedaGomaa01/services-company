@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/quill/monokai-sublime.min.css">
     <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/quill/quill.snow.css">
     <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/quill/quill.bubble.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/selects/select2.min.css">
+
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -31,8 +33,6 @@
     <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.css">
     <link rel="stylesheet" type="text/css" href="/app-assets/fonts/simple-line-icons/style.min.css">
     <link rel="stylesheet" type="text/css" href="/app-assets/css/pages/vertical-timeline.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->

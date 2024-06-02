@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\SubserviceController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -21,6 +22,7 @@ Route::view('/', 'pages.home')->name('home');
 Route::view('/gallery', 'pages.gallery')->name('gallery');
 Route::view('/blog', 'pages.blog')->name('blog');
 Route::view('/services', 'pages.services')->name('services');
+Route::view('/subservices', 'pages.subservices')->name('subservices');
 Route::view('/one-service', 'pages.services-single')->name('services.single');
 Route::view('/one-blog', 'pages.blog-single')->name('blog.single');
 Route::view('/faq', 'pages.faq')->name('faq');
@@ -44,6 +46,7 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function(){
 
     Route::resource('/sliders', SliderController::class);
     Route::resource('/services', ServiceController::class);
+    Route::resource('/subservices', SubserviceController::class);
 
 
   });
