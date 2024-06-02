@@ -10,11 +10,19 @@ class Slider extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+    protected $with = ['image'];
 
     # relations 
 
     public function image()
     {
-        return $this->hasOne(Image::class);
+        return $this->belongsTo(Image::class);
+    }
+
+    # overrides 
+    public function delete()
+    {
+        $this->image()->delete();
+        parent::delete();
     }
 }

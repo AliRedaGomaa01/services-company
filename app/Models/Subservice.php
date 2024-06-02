@@ -30,7 +30,7 @@ class Subservice extends Model
 
     public function image()
     {
-        return $this->hasOne(Image::class);
+        return $this->belongsTo(Image::class);
     }
     
     public function service()
