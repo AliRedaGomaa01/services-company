@@ -19,7 +19,7 @@
         'sliders' => route('dashboard.sliders.index') ,
         'services' => route('dashboard.services.index') ,
         'subservices' =>  route('dashboard.subservices.index') ,
-        'joint-ventures' => '#' ,
+        'joint-ventures' =>  route('dashboard.joint-ventures.index') ,
         'team-members' => '#' ,
         'posts' => '#' ,
         'reviews' => '#' ,

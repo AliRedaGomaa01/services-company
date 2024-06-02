@@ -7,6 +7,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SubserviceController;
+use App\Http\Controllers\JointVentureController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -47,6 +48,7 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function(){
     Route::resource('/sliders', SliderController::class);
     Route::resource('/services', ServiceController::class);
     Route::resource('/subservices', SubserviceController::class);
+    Route::resource('/joint-ventures', JointVentureController::class);
 
 
   });

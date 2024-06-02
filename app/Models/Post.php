@@ -13,12 +13,12 @@ class Post extends Model
     protected $guarded = ['id'];
 
     protected $appends = [
-        'title' ,
-        'description' ,
+        'title',
+        'description',
     ];
 
     protected $with = [
-        'image' ,
+        'image',
         'category'
     ];
 
@@ -26,12 +26,12 @@ class Post extends Model
 
     public function getDescriptionAttribute()
     {
-        return app()->isLocale('ar') ? $this->description_ar : $this->description_en ;
+        return app()->isLocale('ar') ? $this->description_ar : $this->description_en;
     }
-    
+
     public function getTitleAttribute()
     {
-        return app()->isLocale('ar') ? $this->title_ar : $this->title_en ;
+        return app()->isLocale('ar') ? $this->title_ar : $this->title_en;
     }
 
     # relations 
@@ -44,5 +44,12 @@ class Post extends Model
     public function category(): MorphOne
     {
         return $this->morphOne(Category::class, 'categorizable');
+    }
+    
+    # overrides
+    public function delete()
+    {
+        $this->image()->delete();
+        parent::delete();
     }
 }

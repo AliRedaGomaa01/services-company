@@ -37,4 +37,18 @@ class Service extends Model
         return $this->belongsTo(Image::class);
     }
 
+    public function subservices()
+    {
+        return $this->hasMany(SubService::class);
+    }
+
+    # overrides
+
+    public function delete()
+    {
+        $this->subservices()->delete();
+        $this->image()->delete();
+        parent::delete();
+    }
+
 }

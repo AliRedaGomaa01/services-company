@@ -39,4 +39,11 @@ class Gallery extends Model
     {
         return $this->morphOne(Category::class, 'categorizable');
     }
+
+    # overrides
+    public function delete()
+    {
+        $this->image()->delete();
+        parent::delete();
+    }
 }

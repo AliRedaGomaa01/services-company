@@ -1,10 +1,10 @@
 @extends('layouts.dashboard')
 
 @section('description')
-    <meta name="description" content="website sliders create page in the dashboard">
+    <meta name="description" content="website jointVentures create page in the dashboard">
 @endsection
 
-@section('title', 'Slider Create')
+@section('title', 'JointVenture Create')
 
 @section('content')
     <!-- Basic form layout section start -->
@@ -13,7 +13,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title" id="basic-layout-form">Add New Slider</h4>
+                        <h4 class="card-title" id="basic-layout-form">Add New JointVenture</h4>
                         <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -27,9 +27,9 @@
                     <div class="card-content collapse show">
                         <div class="card-body">
 
-                            @include('components.dashboard.sliders.form' , [
-                              'formUrl' => route('dashboard.sliders.store'),
-                              'method' => 'POST',
+                            @include('components.dashboard.joint-ventures.form' , [
+                                'formUrl' => route('dashboard.joint-ventures.store'),
+                                'method' => 'POST',
                             ])
 
                         </div>

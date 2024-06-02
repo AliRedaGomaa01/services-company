@@ -12,23 +12,23 @@ class Subservice extends Model
     protected $guarded = ['id'];
 
     protected $appends = [
-        'title' ,
-        'description' ,
+        'title',
+        'description',
     ];
 
     protected $with = [
-        'image' ,
-        'service' ,
+        'image',
+        'service',
     ];
 
     public function getTitleAttribute()
     {
-        return app()->isLocale('ar') ? $this->title_ar : $this->title_en ;
+        return app()->isLocale('ar') ? $this->title_ar : $this->title_en;
     }
 
     public function getDescriptionAttribute()
     {
-        return app()->isLocale('ar') ? $this->description_ar : $this->description_en ;
+        return app()->isLocale('ar') ? $this->description_ar : $this->description_en;
     }
 
     # relations 
@@ -37,12 +37,16 @@ class Subservice extends Model
     {
         return $this->belongsTo(Image::class);
     }
-    
+
     public function service()
     {
         return $this->belongsTo(Service::class);
     }
-    
 
-    
+    # overrides
+    public function delete()
+    {
+        $this->image()->delete();
+        parent::delete();
+    }
 }

@@ -1,3 +1,9 @@
+@include('components.dashboard.preview' , [
+    'pageName' => 'Services',
+    'routeName' => 'services',
+])
+
+
 <form class="form" action="{{ $formUrl }}" method="POST" enctype="multipart/form-data">
     @csrf
     @if ( $method == 'PATCH' )

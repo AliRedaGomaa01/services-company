@@ -1,7 +1,7 @@
 @include('components.dashboard.preview' , [
-    'pageName' => 'Home',
-    'routeName' => 'home',
-])
+    'pageName' => 'Joint Ventures',
+    'routeName' => 'joint-ventures',
+  ])
 
 <form class="form" action="{{ $formUrl }}" method="POST" enctype="multipart/form-data">
     @csrf
@@ -15,7 +15,7 @@
                 <div class="form-group">
                     <label for="projectinput3">Arabic Title</label>
                     <input type="text" class="form-control"  name="title_ar"
-                        value="{{ $slider->title_ar ?? old('title_ar') }}">
+                        value="{{ $jointVenture->title_ar ?? old('title_ar') }}">
                 </div>
             </div>
 
@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <label for="projectinput3">English Title</label>
                     <input type="text" class="form-control"  name="title_en"
-                        value="{{ $slider->title_en ?? old('title_en') }}">
+                        value="{{ $jointVenture->title_en ?? old('title_en') }}">
                 </div>
             </div>
         </div>
@@ -32,14 +32,14 @@
             'label' => 'Arabic Description',
             'id' => 'editor1',
             'textareaName' => 'description_ar',
-            'value' => $slider->description_ar ?? old('description_ar'),
+            'value' => $jointVenture->description_ar ?? old('description_ar'),
         ])
 
         @include('components.dashboard.text-editor', [
             'label' => 'English Description',
             'id' => 'editor2',
             'textareaName' => 'description_en',
-            'value' => $slider->description_en ?? old('description_en'),
+            'value' => $jointVenture->description_en ?? old('description_en'),
         ])
 
         <div class="col-md-6">
@@ -52,10 +52,10 @@
         </div>
         </div>
 
-        @if ( isset($slider->image->path) )
+        @if ( isset($jointVenture->image->path) )
           <div class="col-md-6" id="old-image">
             old image
-              <img src="{{ $slider->image->publicPath }}" width="100%">
+              <img src="{{ $jointVenture->image->publicPath }}" width="100%">
           </div>
         @endif
 
@@ -81,12 +81,12 @@
     
     @include('components.dashboard.text-editor-script', [
         'id' => 'editor1',
-        'value' => $slider->description_ar ?? old('description_ar'),
+        'value' => $jointVenture->description_ar ?? old('description_ar'),
     ])
 
     @include('components.dashboard.text-editor-script', [
         'id' => 'editor2',
-        'value' => $slider->description_en ?? old('description_en'),
+        'value' => $jointVenture->description_en ?? old('description_en'),
     ])
 
     <script>

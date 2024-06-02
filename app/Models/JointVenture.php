@@ -38,4 +38,12 @@ class JointVenture extends Model
     {
         return $this->belongsTo(Image::class);
     }
+
+    # overrides
+    public function delete()
+    {
+        $this->image()->delete();
+        parent::delete();
+    }
+    
 }
