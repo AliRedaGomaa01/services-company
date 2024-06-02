@@ -18,7 +18,7 @@
         'settings' =>  route('dashboard.settings.edit') ,
         'sliders' => route('dashboard.sliders.index') ,
         'services' => route('dashboard.services.index') ,
-        'subservices' => '#' ,
+        'subservices' =>  route('dashboard.subservices.index') ,
         'joint-ventures' => '#' ,
         'team-members' => '#' ,
         'posts' => '#' ,

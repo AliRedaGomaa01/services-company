@@ -38,6 +38,8 @@ class DatabaseSeeder extends Seeder
         $this->call (SliderSeeder::class );
 
         $this->call (ServiceSeeder::class );
+
+        $this->call (SubserviceSeeder::class );
         
         // $reviews = [
             
