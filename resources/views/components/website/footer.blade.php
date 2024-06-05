@@ -97,7 +97,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>&copy; Copyright 2024. All Rights Reserved by <a href="https://attractionme.net">ATTRACTIONME</a></p>
+                    <p>&copy; Copyright 2024. All Rights Reserved by <a href="https://aligh.net">aligh</a></p>
                 </div>
                 <div class="col-md-6 text-right link">
                     <ul>
